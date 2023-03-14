@@ -18,17 +18,17 @@ app.set('views',path.join(__dirname,'/views'));
 const username = "piyushkumarat051"
 const password = "oqfz1wZ7PH1FzZuo"
 const dbname = "yupp"
+mongoose.set('strictQuery', true);
 try {
   mongoose.connect(`mongodb+srv://piyushkumarat051:oqfz1wZ7PH1FzZuo@yupp.7kzvm9x.mongodb.net/?retryWrites=true&w=majority`, {
     useUnifiedTopology: true,
     useNewUrlParser: true
   });
   console.log("connected to db");
+
 } catch (error) {
   handleError(error);
 }
-mongoose.set('strictQuery', true);
-
 process.on('unhandledRejection', error => {
   console.log('unhandledRejection', error.message);
 });
