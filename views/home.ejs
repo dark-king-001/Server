@@ -1,0 +1,39 @@
+<%- include('partials/head') %> 
+welcome <%= object.name %>
+<section>
+    <h3><%= object.groups[0] %></h3>
+    <% for(var i=0; i<object.data.length; i++) {%>
+           <a href=<%= object.data[i].link %>>
+               <p class = "data">
+                   <%= object.data[i].name %>
+               </p>
+           </a>
+    <% } %>
+</section>
+
+
+ <button onclick="funct()">click me</button>
+<%- include('partials/footer') %> 
+<script>
+    let element = document.getElementsByClassName('data')
+    let funct = arr => {
+        console.log("hmmmmmmmmm")
+        element.innerHTML += "lol"
+    }
+</script>
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #121212;
+    }
+    section {
+        margin-right: 1%;
+        background-color: #888;
+        border-radius: 20px;
+        padding: 1%;
+    }
+    a {
+        color: aliceblue;
+    }
+</style>
