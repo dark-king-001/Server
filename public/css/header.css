@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction:column;
+  flex-grow:1;
+
+  justify-content: space-between;
+
+  max-width: fit-content;
+  font-size: 1.8rem;
+
+  margin: 0em 1em;
+  padding: 1em 2em;
+}
+.header > section {
+  display: flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+.header > section > a {
+  padding:0.1em;
+  margin: 0.4em 0em;
+  border-radius: 7px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header > section > a:hover {
+  color: aliceblue;
+  background-color: black;
+}
+
