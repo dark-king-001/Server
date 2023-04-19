@@ -13,13 +13,9 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const jsonParser = bodyParser.json()
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'/views'));
+app.use(express.static(path.join(__dirname,'public')));
 
-// establishing connection to database
-const username = "piyushkumarat051"
-const password = "oqfz1wZ7PH1FzZuo"
-const dbname = "yupp"
 mongoose.set('strictQuery', true);
-
 try {
   mongoose.connect(process.env.MONGO, {
     useUnifiedTopology: true,
