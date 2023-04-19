@@ -25,7 +25,7 @@ let datafetch = async (text,temperature = 0.7,max_tokens = 64) => {
 }
 
 let getResponse = (req,res,next) => {
-    res.send("<h>no page available</h>")
+    res.send("no data yet")
     res.end()
 }
 let postResponse = (req,res,next) => {
