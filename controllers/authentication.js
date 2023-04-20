@@ -68,7 +68,7 @@ let signin = (req, res) => {
       req.session.loggedin = true
       //responding to client request with user profile success message and  access token .
       res.status(200)
-        .redirect('/home')
+        .redirect('http://localhost:5173/')
     });
 };
 
