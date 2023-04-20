@@ -43,23 +43,19 @@ app.get('/',(req,res) => {
   if (req.session.loggedin !== true){
     res.redirect('/signin');
   } else {
-    res.redirect('/home')
+    res.redirect('http://localhost:5173/')
   }
 })
-const route_home = require('./routes/home')
-app.use('/',jsonParser,route_home)
+const route_index = require('./routes/index')
+app.use('/',jsonParser,route_index)
 
 // Signin and Sign up frontend
 const route_sign = require('./routes/sign')
 app.use('/',jsonParser,route_sign)
 
-// bookmark load and save backend
-const route_bookmark = require('./routes/bookmark')
-app.use('/',jsonParser,route_bookmark)
-
-// openai backend route
-const route_openai = require('./routes/openai')
-app.use('/',jsonParser,route_openai)
+// // openai backend route
+// const route_openai = require('./routes/openai')
+// app.use('/',jsonParser,route_openai)
 
 // authentication backend
 const route_auth = require('./routes/authentication')
