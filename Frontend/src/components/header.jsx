@@ -13,11 +13,11 @@ export default function header() {
             />
         </a>
         <section id="navbar" className="navbar">
-             <Link to="/"># HOME</Link>
+            <Link to="/"># HOME</Link>
             <Link to="/explore"># EXPLORE</Link>
             <Link to="/messages"># MESSAGES</Link>
             <Link to="/notifications"># NOTIFICATIONS</Link>
-            <Link to="/bookmark"># BOOKMARK</Link>
+            <Link to="/bookmarks"># BOOKMARK</Link>
             <Link to="/profile"># PROFILE</Link>
             <Link to="/more"># MORE</Link>
         </section>
