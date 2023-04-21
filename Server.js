@@ -46,9 +46,6 @@ app.get('/',(req,res) => {
     res.redirect('http://localhost:5173/')
   }
 })
-const route_index = require('./routes/index')
-app.use('/',jsonParser,route_index)
-
 // Signin and Sign up frontend
 const route_sign = require('./routes/sign')
 app.use('/',jsonParser,route_sign)
