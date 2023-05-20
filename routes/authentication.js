@@ -4,8 +4,8 @@ let router = express.Router();
 const auth_controller = require("../controllers/authentication")
 const verifyToken = require('../middleware/authJWT')
 
-router.post('/login',auth_controller.signin)
-router.post('/register',auth_controller.signup)
+router.post('/login',auth_controller.login)
+router.post('/register',auth_controller.register)
 router.get("/hiddencontent", verifyToken, function (req, res) {
   if (!user) {
     res.status(403)
