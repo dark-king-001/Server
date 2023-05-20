@@ -1,7 +1,7 @@
-## Project VichaarShala
+# Project VichaarShala
 * this a project where i bring a chatting application with a modern interface to the world
 
-# Command to setup and install all the dependencies
+## Command to setup and install all the dependencies
 1. to clone the project
 ```sh
 git clone https://github.com/dark-king-001/VichaarShala.git && cd VichaarShala
@@ -18,7 +18,7 @@ npm run dev
 ```sh
 cd Frontend && npm run dev && cd ../
 ```
-# to change the enviornment settings
+## to change the enviornment settings
 * the current settings for backend are loaded into ```.env```
 ```.env
 PORT=3000
@@ -33,7 +33,7 @@ API_SECRET=This_is_very_secret_string
 ```
 
 * since the server is in development my link is also there but i authenticate the device on runtime so it won't work for other users
-# Directory Structure
+## Directory Structure
 
 ```sh
 VichaarShala
@@ -77,7 +77,7 @@ VichaarShala
 /node_modules is ignored
 ```
 
-# Backend Dependencies
+## Backend Dependencies
 ```json
 {
     "axios": "^1.2.2",
@@ -96,7 +96,7 @@ VichaarShala
 }
 ```
 * same can be found on package.json
-# Frontend Dependencies
+## Frontend Dependencies
 ```json
 {
   "react": "^18.2.0",
