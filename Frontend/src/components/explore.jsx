@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function () {
+export default function explore() {
   const [posts, setPosts] = useState([
     {
       id: 1,
