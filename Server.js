@@ -31,24 +31,20 @@ process.on('unhandledRejection', error => {
 });
 
 // app.use
-app.use(cors())
+app.use(cors({
+  origin: process.env.FRONTEND, // Replace with your React frontend domain
+  credentials: true
+}));
+// app.use(cors()) 
 app.use(session({
 	secret: 'secret',
 	resave: true,
 	saveUninitialized: true
 }));
+app.get('/', (req, res) => {
+  res.send("backend home")
+});
 
-// Home frontend Route
-app.get('/',(req,res) => {
-  if (req.session.loggedin !== true){
-    res.redirect('/signin');
-  } else {
-    res.redirect('http://localhost:5173/')
-  }
-})
-// Signin and Sign up frontend
-const route_sign = require('./routes/sign')
-app.use('/',jsonParser,route_sign)
 
 const route_profile = require('./routes/getProfile')
 app.use('/profile',jsonParser,route_profile)
@@ -59,7 +55,7 @@ app.use('/profile',jsonParser,route_profile)
 
 // authentication backend
 const route_auth = require('./routes/authentication')
-app.use('/',urlencodedParser,route_auth)
+app.use('/auth',urlencodedParser,route_auth)
 
 // activating server and start routing
 const server_Port = process.env.PORT
