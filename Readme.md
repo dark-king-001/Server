@@ -1,4 +1,7 @@
-Directory Structure
+
+# Directory Structure
+
+```sh
 VichaarShala
 ├── controllers
 │   ├── authentication.js
@@ -38,7 +41,11 @@ VichaarShala
     ├── Sign_in.ejs
     └── Sign_up.ejs
 /node_modules is ignored
-installed node modules
+```
+
+# installed node modules
+```json
+{
     "axios": "^1.2.2",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
@@ -52,4 +59,6 @@ installed node modules
     "mongoose": "^6.9.2",
     "nodemon": "^2.0.20",
     "request": "^2.88.2"
-same can be found on pachage.json
+}
+```
+* same can be found on pachage.json
