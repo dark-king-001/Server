@@ -1,63 +1,44 @@
 let getID = (req, res) => {
     if (req.session.loggedin === true){
-        res
-        .status(200)
-        .send({data : req.session.id})
+        return res.json({value : req.session.id})
     } else {
-        res
-        .status(400)
-        .send({error : "invalid request"})
+        return res.json({error : "invalid request"})
     }
 };
 
 let getEmail = (req, res) => {
+    console.log(req.session)
     if (req.session.loggedin === true){
-        res
-        .status(200)
-        .send({data : req.session.email})
+        return res.json({value : req.session.email})
     } else {
-        res
-        .status(400)
-        .send({error : "invalid request"})
+        return res.json({error : "invalid request"})
     }
 };
 
 
 let getUsername = (req, res) => {
     if (req.session.loggedin === true){
-        res
-        .status(200)
-        .send({data : req.session.username})
+        return res.json({value : req.session.username})
     } else {
-        res
-        .status(400)
-        .send({error : "invalid request"})
+        return res.json({error : "invalid request"})
     }
 };
 
 
 let getAccessToken = (req, res) => {
     if (req.session.loggedin === true){
-        res
-        .status(200)
-        .send({data : req.session.getAccessToken})
+        return res.json({value : req.session.getAccessToken})
     } else {
-        res
-        .status(400)
-        .send({error : "invalid request"})
+        return res.json({error : "invalid request"})
     }
 };
 
 
 let getLoggedin = (req, res) => {
     if (req.session.loggedin === true){
-        res
-        .status(data)
-        .send({payload : req.session.loggedin})
+        return res.json({value : req.session.loggedin})
     } else {
-        res
-        .status(400)
-        .send({error : "invalid request"})
+        return res.json({error : "invalid request"})
     }
 };
 
