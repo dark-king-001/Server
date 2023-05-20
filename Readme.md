@@ -106,3 +106,37 @@ VichaarShala
 }
 ```
 * same can be found on package.json
+## Logic Tre(if anyone is interested open-source development
+* at start
+```
+website start
+if authenticated
+  to Frontend
+else
+  Signin
+```
+
+* at signin
+```
+if signin
+  authenticated
+  redirected to Frontend
+  return signin
+else if signup
+  register
+  all the processing
+  redirect to signin
+```
+
+* authentication procedure 
+
+```
+for signin
+  path: server.js -> routes/sign.js /signin -> controllers/sign.js /signin -> routes/authentication.js /login -> controllers/authentication.js /login
+for signup
+  path: server.js -> routes/sign.js /signup -> controllers/sign.js /signup -> routes/authentication.js /register -> controllers/authentication.js /register
+```
+NOTE : data is loaded using model 
+```
+models/user.js
+```
