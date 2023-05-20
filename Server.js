@@ -50,6 +50,9 @@ app.get('/',(req,res) => {
 const route_sign = require('./routes/sign')
 app.use('/',jsonParser,route_sign)
 
+const route_profile = require('./routes/getProfile')
+app.use('/profile',jsonParser,route_profile)
+
 // // openai backend route
 // const route_openai = require('./routes/openai')
 // app.use('/',jsonParser,route_openai)
