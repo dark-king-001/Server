@@ -1,4 +1,38 @@
+## Project VichaarShala
+* this a project where i bring a chatting application with a modern interface to the world
 
+# Command to setup and install all the dependencies
+1. to clone the project
+```sh
+git clone https://github.com/dark-king-001/VichaarShala.git && cd VichaarShala
+```
+2. to install the dependencies
+```sh
+npm i && cd Frontend && npm i && cd ../
+```
+3. to run the backend
+```sh
+npm run dev
+```
+4. to run the Frontend
+```sh
+cd Frontend && npm run dev && cd ../
+```
+# to change the enviornment settings
+* the current settings for backend are loaded into ```.env```
+```code
+PORT=3000
+MONGO=mongodb://127.0.0.1:27017/VichaarShala
+API_SECRET=This_is_very_secret_string
+```
+* to use mongodb Atlas
+```code
+PORT=3000
+# MONGO= your mongodb url
+API_SECRET=This_is_very_secret_string
+```
+
+* since the server is in development my link is also there but i authenticate the device on runtime so it won't work for other users
 # Directory Structure
 
 ```sh
@@ -43,7 +77,7 @@ VichaarShala
 /node_modules is ignored
 ```
 
-# installed node modules
+# Backend Dependencies
 ```json
 {
     "axios": "^1.2.2",
@@ -61,4 +95,14 @@ VichaarShala
     "request": "^2.88.2"
 }
 ```
-* same can be found on pachage.json
+* same can be found on package.json
+# Frontend Dependencies
+```json
+{
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.10.0",
+  "vite": "^4.3.1"
+}
+```
+* same can be found on package.json
