@@ -67,6 +67,7 @@ let signin = (req, res) => {
       req.session.accessToken = token
       req.session.loggedin = true
       //responding to client request with user profile success message and  access token .
+      console.log(`${req.session.username} signed in`)
       res.status(200)
         .redirect('http://localhost:5173/')
     });
