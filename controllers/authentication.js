@@ -2,7 +2,7 @@ var jwt = require("jsonwebtoken");
 var bcrypt = require("bcrypt");
 var User = require("../models/user");
 
-let signup = (req, res) => {
+let register = (req, res) => {
   const user = new User({
     fullName: req.body.username,
     email: req.body.email,
@@ -18,12 +18,13 @@ let signup = (req, res) => {
         });
       return;
     } else {
-      res.status(200).redirect('/signin')
+      console.log(`${user.email} signed up`)
+      return res.status(200).json({message : "success"})
     }
   });
 };
 
-let signin = (req, res) => {
+let login = (req, res) => {
   User.findOne({
       email: req.body.email
     })
@@ -41,7 +42,6 @@ let signin = (req, res) => {
             message: "User Not found."
           });
       }
-
       //comparing passwords
       var passwordIsValid = bcrypt.compareSync(
         req.body.password,
@@ -66,11 +66,15 @@ let signin = (req, res) => {
       req.session.username = user.fullName
       req.session.accessToken = token
       req.session.loggedin = true
+      // window.localStorage.setItem("id", user._id)
+      // window.localStorage.setItem("email", user.email)
+      // window.localStorage.setItem("username" , user.fullName)
+      // window.localStorage.setItem('accessToken' , token)
+      // window.localStorage.setItem("loggedin" , true)
       //responding to client request with user profile success message and  access token .
       console.log(`${req.session.username} signed in`)
-      res.status(200)
-        .redirect('http://localhost:5173/')
+      return res.status(200).json(req.session)
     });
 };
 
-module.exports = {signup, signin}
+module.exports = {register, login}
