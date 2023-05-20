@@ -1,96 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 export default function () {
+  const [posts, setPosts] = useState([
+    {
+      id: 1,
+      title: 'Post Subject',
+      date: 'posted on 1st July 2023',
+      content: 'Emotional Rescue is the 15th British and 17th American studio album...',
+      likes: 0,
+      comments: []
+    },
+    {
+      id: 1,
+      title: 'Post Subject',
+      date: 'posted on 1st July 2023',
+      content: 'Emotional Rescue is the 15th British and 17th American studio album...',
+      likes: 0,
+      comments: []
+    },
+    // Add more post objects here as needed
+  ]);
+
+  const handleLike = (postId) => {
+    setPosts((prevPosts) =>
+      prevPosts.map((post) => {
+        if (post.id === postId) {
+          return { ...post, likes: post.likes + 1 };
+        }
+        return post;
+      })
+    );
+  };
+
+  const handleComment = (postId, comment) => {
+    setPosts((prevPosts) =>
+      prevPosts.map((post) => {
+        if (post.id === postId) {
+          return { ...post, comments: [...post.comments, comment] };
+        }
+        return post;
+      })
+    );
+  };
+
   return (
     <main>
-        <form action="/search" method="post">
-            <input type="text" name="search" id="search" placeholder="Search" />
-        </form>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
+      <form action="/search" method="post">
+        <input type="text" name="search" id="search" placeholder="Search" />
+      </form>
+      {posts.map((post) => (
+        <section className="post" key={post.id}>
+          <div className="title">
+            {post.title} <p>{post.date}</p>
+          </div>
+          <div className="content">{post.content}</div>
+          <button onClick={() => handleLike(post.id)}>Like ({post.likes})</button>
+          <input
+            type="text"
+            name="comment"
+            className="comment"
+            id="comment"
+            placeholder="Comment"
+            onChange={(e) => handleComment(post.id, e.target.value)}
+          />
         </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
+      ))}
     </main>
-  )
+  );
 }
