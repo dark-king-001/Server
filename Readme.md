@@ -20,13 +20,13 @@ cd Frontend && npm run dev && cd ../
 ```
 # to change the enviornment settings
 * the current settings for backend are loaded into ```.env```
-```code
+```.env
 PORT=3000
 MONGO=mongodb://127.0.0.1:27017/VichaarShala
 API_SECRET=This_is_very_secret_string
 ```
 * to use mongodb Atlas
-```code
+```.env
 PORT=3000
 # MONGO= your mongodb url
 API_SECRET=This_is_very_secret_string
