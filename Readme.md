@@ -106,7 +106,8 @@ VichaarShala
 }
 ```
 * same can be found on package.json
-## Logic Tre(if anyone is interested open-source development
+## Logic Tree 
+(if anyone is interested open-source development)
 * at start
 ```
 website start
