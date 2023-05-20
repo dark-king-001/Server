@@ -13,16 +13,16 @@ export default function header() {
             />
         </a>
         <section id="navbar" className="navbar">
-            <Link to="/"># HOME</Link>
-            <Link to="/explore"># EXPLORE</Link>
-            <Link to="/messages"># MESSAGES</Link>
-            <Link to="/notifications"># NOTIFICATIONS</Link>
-            <Link to="/bookmarks"># BOOKMARK</Link>
-            <Link to="/profile"># PROFILE</Link>
-            <Link to="/more"># MORE</Link>
+            <Link to="/"> <pi className="icon">#</pi><p>HOME</p></Link>
+            <Link to="/explore"><pi className="icon">#</pi><p>EXPLORE</p></Link>
+            <Link to="/messages"><pi className="icon">#</pi><p>MESSAGES</p></Link>
+            <Link to="/notifications"><pi className="icon">#</pi><p>NOTIFICATIONS</p></Link>
+            <Link to="/bookmarks"><pi className="icon">#</pi><p>BOOKMARKS</p></Link>
+            <Link to="/profile"><pi className="icon">#</pi><p>PROFILE</p></Link>
+            <Link to="/more"><pi className="icon">#</pi><p>MORE</p></Link>
         </section>
         <div className="newpost">
-            <button>New Thought</button>
+            <button><p>New Thought</p></button>
         </div>
         <div className="user">
         </div>
