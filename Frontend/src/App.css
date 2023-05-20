@@ -90,9 +90,9 @@ header > .navbar {
   flex-grow:1;
 }
 
-header > .navbar > a {
+header > .navbar > Link {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   padding:0.1em;
   margin: 0.4em 0em;
@@ -115,6 +115,44 @@ header > .user {
   border-color: black;
 }
 
+@media only screen and (max-width: 1120px) {
+  header {
+    max-width : 5%;
+  }
+  header > a > img {
+    margin-left: -4rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  header > .navbar > a > p {
+    display: none;
+  }
+  header > .newpost > button {
+    padding: none;
+    max-width: 5px;
+    max-height: 5px;
+  }
+  header > .user {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1120px) {
+  header > .navbar > a {
+    padding: 0px 5px ;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  header > .navbar > a > .icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  header > .newpost > button {
+    max-width: 0px;
+    display: none;
+  }
+}
 /* Hide scrollbar for Chrome, Safari and Opera */
 header::-webkit-scrollbar {
   display: none;
@@ -185,4 +223,10 @@ main > form > input {
 main > form > input:focus {
   outline: none;
   border-color: #023e8a;
+}
+@media only screen and (max-width: 1120px) {
+  main {
+    margin-left: 6%;
+    margin-right: -7%;
+  }
 }
