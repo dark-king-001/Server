@@ -1,77 +1,58 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
 export default function profile() {
+  const [aboutMe, setAboutMe] = useState('');
+  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
+
+  useEffect(() => {
+    // fetchEmail();
+    // fetchUsername();
+  }, []);
+
+  // const fetchEmail = async () => {
+  //   try {
+  //     const response = await fetch('http://localhost:3000/profile/getemail',{ withCredentials: true });
+  //     const responseData = await response.text();
+  //     console.log(responseData)
+  //     setEmail(responseData.value);
+  //   } catch (error) {
+  //     console.log('Error fetching email:', error);
+  //   }
+  // };
+
+  // const fetchUsername = async () => {
+  //   try {
+  //     const response = await fetch('http://localhost:3000/profile/getusername',{ withCredentials: true });
+  //     const responseData = await response.json();
+  //     setUsername(responseData.value);
+  //   } catch (error) {
+  //     console.log('Error fetching username:', error);
+  //   }
+  // };
+
   return (
     <main>
-        <h>Profile</h>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
-        <section class="post">
-            <div class="title">Post Subject <p>posted on 1st july 2023</p></div>
-            <div class="content">
-                Emotional Rescue is the 15th British and 17th American studio album 
-                by English rock band the Rolling Stones, released on 20 June 1980 by 
-                Rolling Stones Records. Following the success of their previous album, 
-                Some Girls, their biggest hit to date, the Rolling Stones returned to 
-                the studio in early 1979 to start writing and recording its follow-up. 
-                Full-time members Mick Jagger (vocals), Keith Richards (guitar), 
-                Ronnie Wood (guitar), Bill Wyman (bass) and Charlie Watts (drums) 
-                were joined by frequent collaborators Ian Stewart (keyboards), 
-                Nicky Hopkins (keyboards), Bobby Keys (saxophone) and Sugar Blue 
-                (harmonica).
-            </div>
-            <button>Like</button>
-            <input type="text" name="comment" class="comment" id="comment" placeholder="Comment" />
-        </section>
+      <div className="profile">
+        <div className="profile-header">
+          <img src="profile-picture.jpg" alt="Profile Picture" className="profile-picture" />
+          <h1 className="profile-name">John Doe</h1>
+          <p className="profile-status">Online</p>
+        </div>
+        <div className="profile-details">
+          <h2>About Me</h2>
+          <p>{aboutMe}</p>
+          <h2>Contact Information</h2>
+          <ul>
+            <li>Email: {email}</li>
+            <li>Username: {username}</li>
+          </ul>
+        </div>
+        <div className="profile-actions">
+          <button className="action-button">Send Message</button>
+          <button className="action-button">Add Friend</button>
+        </div>
+      </div>
     </main>
-  )
+  );
 }
