@@ -48,6 +48,9 @@ app.get('/', (req, res) => {
 // // openai backend route
 // const route_openai = require('./routes/openai')
 // app.use('/',jsonParser,route_openai)
+const route_profile = require('./routes/profile')
+app.use('/',jsonParser,route_profile)
+
 
 // authentication backend
 const route_auth = require('./routes/authentication')
