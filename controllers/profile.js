@@ -23,9 +23,6 @@ let setProfile = (req, res) => {
 };
 
 let getProfile = (req, res) => {
-  console.log(req.body)
-  console.log(req.params)
-  console.log(req.query)
   Profile.findOne({
       email: req.query.email
     })
