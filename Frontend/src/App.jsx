@@ -17,11 +17,17 @@ import './App.css';
 export default function App() {
   const { globalData, setGlobalData } = useContext(AppContext);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-
+  useEffect(() => {
+    // Check if data exists in storage and set it as global data
+    const storedData = localStorage.getItem('appData');
+    if (storedData) {
+      setGlobalData(JSON.parse(storedData));
+    }
+  }, []);
   useEffect(() => {
     // Check if globalData?.loggedin is true and update the isLoggedIn state accordingly
     setIsLoggedIn(globalData?.loggedin || false);
+
   }, [globalData]);
 
   return (
