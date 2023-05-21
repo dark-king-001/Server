@@ -45,10 +45,6 @@ app.get('/', (req, res) => {
   res.send("backend home")
 });
 
-
-const route_profile = require('./routes/getProfile')
-app.use('/profile',jsonParser,route_profile)
-
 // // openai backend route
 // const route_openai = require('./routes/openai')
 // app.use('/',jsonParser,route_openai)

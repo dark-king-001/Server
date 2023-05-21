@@ -66,12 +66,6 @@ let login = (req, res) => {
       req.session.username = user.fullName
       req.session.accessToken = token
       req.session.loggedin = true
-      // window.localStorage.setItem("id", user._id)
-      // window.localStorage.setItem("email", user.email)
-      // window.localStorage.setItem("username" , user.fullName)
-      // window.localStorage.setItem('accessToken' , token)
-      // window.localStorage.setItem("loggedin" , true)
-      //responding to client request with user profile success message and  access token .
       console.log(`${req.session.username} signed in`)
       return res.status(200).json(req.session)
     });

@@ -28,6 +28,7 @@ export default function Login() {
         localStorage.setItem('appData', JSON.stringify(response.data));
         setGlobalData(response.data); // Store the response data in global state
         // Update storage whenever global data changes
+        window.location.href = '/explore';
       })
       .catch((error) => {
         console.error(error);

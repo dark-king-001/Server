@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function explore() {
   const [posts, setPosts] = useState([
     {
-      id: 1,
+      id: 0,
       title: 'Post Subject',
       date: 'posted on 1st July 2023',
       content: 'Emotional Rescue is the 15th British and 17th American studio album...',
