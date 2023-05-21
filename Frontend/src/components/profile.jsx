@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AppContext } from '../AppContext';
 
 export default function profile() {
+  const { globalData, setGlobalData } = useContext(AppContext);
   const [aboutMe, setAboutMe] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
 
   useEffect(() => {
+    // Check if globalData?.loggedin is true and update the isLoggedIn state accordingly
     // fetchEmail();
-    // fetchUsername();
-  }, []);
+    setEmail(globalData?.email);
+    setUsername(globalData?.username);
+  }, [globalData]);
 
   // const fetchEmail = async () => {
   //   try {
   //     const response = await fetch('http://localhost:3000/profile/getemail',{ withCredentials: true });
-  //     const responseData = await response.text();
+  //     const responseData = await response.json();
   //     console.log(responseData)
   //     setEmail(responseData.value);
   //   } catch (error) {
