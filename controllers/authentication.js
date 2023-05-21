@@ -25,6 +25,7 @@ let register = (req, res) => {
 };
 
 let login = (req, res) => {
+  console.log(req.body)
   User.findOne({
       email: req.body.email
     })
@@ -36,6 +37,7 @@ let login = (req, res) => {
           });
         return;
       }
+      console.log(user)
       if (!user) {
         return res.status(404)
           .send({

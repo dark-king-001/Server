@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import qs from 'qs';
 
 export default function profile() {
   const [profileData, setProfileData ] = useState('')
@@ -7,7 +8,8 @@ export default function profile() {
     fetchProfile();
   }, []);
   const fetchProfile = () => {
-    axios.get(`http://localhost:3000/profile?email=${JSON.parse(localStorage.getItem('appData')).email}`)
+    const formData = qs.stringify({ email:JSON.parse(localStorage.getItem('appData')).email});
+    axios.get(`http://localhost:3000/profile?${formData}`)
       .then((response) => {
         setProfileData(response.data.user)
       })
@@ -18,7 +20,6 @@ export default function profile() {
   };
   const handleLogout = () => {
     // Delete the global data from local storage
-    setGlobalData({});
     localStorage.setItem('appData', JSON.stringify({}));
     // Redirect to the login screen
     window.location.href = '/login'; // Replace '/login' with the actual login screen URL

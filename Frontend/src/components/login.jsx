@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import axios from 'axios';
+import qs from 'qs';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = JSON.stringify({ email, password });
+    const formData = qs.stringify({ email, password });
     axios.post('http://localhost:3000/auth/login', formData, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
