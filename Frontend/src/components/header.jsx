@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { AppContext } from '../AppContext';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 
 export default function header() {
-  const { globalData, setGlobalData } = useContext(AppContext);
   const [user , setUser] = useState('');
   useEffect(() => {
     // Check if globalData?.loggedin is true and update the isLoggedIn state accordingly
-    setUser(globalData?.username);
-  }, [globalData]);
+    setUser(JSON.parse(localStorage.getItem('appData')).username);
+  },[]);
   return (
     <header>
         <a href="/" id="logo" className="logo">
