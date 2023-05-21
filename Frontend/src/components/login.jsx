@@ -25,7 +25,9 @@ export default function Login() {
       },
     })
       .then((response) => {
+        localStorage.setItem('appData', JSON.stringify(response.data));
         setGlobalData(response.data); // Store the response data in global state
+        // Update storage whenever global data changes
       })
       .catch((error) => {
         console.error(error);
