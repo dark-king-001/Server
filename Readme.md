@@ -1,143 +1,77 @@
-# Project VichaarShala
-* this a project where i bring a chatting application with a modern interface to the world
+# Hand Gesture Recognition
+<p align="center">
+  <img src="https://github.com/dark-king-001/Snake_Game/blob/main/Snapshots/Snake%20Game.png" alt="Snake Game" />
+</p>
 
-## Command to setup and install all the dependencies
-1. to clone the project
+<p align="center">
+  <h4 align="center">Be Smart with a hand gesture system control</h4>
+</p>
+
+
+## About The Project
+
+### Overview
+
+This script allows you to control the system volume using hand gestures recognized by a computer vision model. It uses the MediaPipe library for hand tracking and a pre-trained model for gesture recognition.
+
+### Features
+
+
+- **Increase Volume**: Thumbs Up: Increases the system volume.
+- **Decrease Volume**: Thumbs Down: Decreases the system volume.
+
+### Dependencies
+
+- **Hardware Access**: The script will start capturing the video from the webcam and display the output frame.
+- **System Requirements**: Make sure your system has audio capabilities and the necessary audio drivers are installed for volume control to work properly.
+
+### Purpose
+
+To learn Machine Learning and AI in python in a more fun way
+
+## Build With
+[![Python 3.10 - Programming Language](https://img.shields.io/badge/Python%203.10%20-Programming%20Language%20-green?style=flat&logo=Python)](https://www.python.org/)
+[![Tensorflow - Python Module For Machine Learning](https://img.shields.io/badge/Tensorflow%20-Python%20Module%20For%20Machine%20Learning%20-green?style=flat&logo=TF)](https://www.tensorflow.org/)
+[![Keras - Backend API for Machine Learning](https://img.shields.io/badge/Keras%20-Backend%20API%20for%20Machine%20Learning%20-green?style=flat&logo=Keras)](https://keras.io/)
+
+## Getting Started
+
+### Installation
+
+1. Clone the repo: 
 ```sh
-git clone https://github.com/dark-king-001/VichaarShala.git && cd VichaarShala
+git clone https://github.com/dark-king-001/Hand_gesture.git
 ```
-2. to install the dependencies
+2. Install the required packages:
 ```sh
-npm i && cd Frontend && npm i && cd ../
+pip install opencv-python numpy mediapipe tensorflow keras
 ```
-3. to run the backend
+3. Enter the Folder: 
 ```sh
-npm run dev
+cd Hand_gesture
 ```
-4. to run the Frontend
+4. run the game: 
 ```sh
-cd Frontend && npm run dev && cd ../
-```
-## to change the enviornment settings
-* the current settings for backend are loaded into ```.env```
-```.env
-PORT=3000
-MONGO=mongodb://127.0.0.1:27017/VichaarShala
-API_SECRET=This_is_very_secret_string
-```
-* to use mongodb Atlas
-```.env
-PORT=3000
-# MONGO= your mongodb url
-API_SECRET=This_is_very_secret_string
+python main.py
 ```
 
-* since the server is in development my link is also there but i authenticate the device on runtime so it won't work for other users
-## Directory Structure
+## Additional libraries
 
-```sh
-VichaarShala
-├── controllers
-│   ├── authentication.js
-│   ├── bookmark.js
-│   ├── home.js
-│   ├── openai.js
-│   └── sign.js
-├── middleware
-│   └── authJWT.js
-├── models
-│   ├── bookmark.js
-│   └── user.js
-├── package.json
-├── package-lock.json
-├── public
-│   ├── css
-│   │   ├── index.css
-│   │   ├── left.css
-│   │   ├── main.css
-│   │   └── right.css
-│   └── js
-├── Readme.md
-├── routes
-│   ├── authentication.js
-│   ├── bookmark.js
-│   ├── home.js
-│   ├── openai.js
-│   └── sign.js
-├── Server.js
-└── views
-    ├── home.ejs
-    ├── partials
-    │   ├── head.ejs
-    │   ├── left.ejs
-    │   ├── main.ejs
-    │   └── right.ejs
-    ├── Sign_in.ejs
-    └── Sign_up.ejs
-/node_modules is ignored
-```
+[![OpenCV - Hardware and AI module](https://img.shields.io/badge/OpenCV%20-Hardware%20and%20AI%20module%20-green?style=flat&logo=OpenCV)](https://opencv.org/)
+[![NumPy - A Scientific Calculation module](https://img.shields.io/badge/NumPy%20-A%20Scientific%20Calculation%20module%20-green?style=flat&logo=NumPy)](https://numpy.org/)
+[![Mediapipe - Cross-platform API deployment solution](https://img.shields.io/badge/Mediapipe-Cross%20platform%20API%20deployment%20solution%20-green?style=flat&logo=Mediapipe)](https://pypi.org/project/mediapipe/)
 
-## Backend Dependencies
-```json
-{
-    "axios": "^1.2.2",
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "jsonwebtoken": "^9.0.0",
-    "moment": "^2.29.4",
-    "mongoose": "^6.9.2",
-    "nodemon": "^2.0.20",
-    "request": "^2.88.2"
-}
-```
-* same can be found on package.json
-## Frontend Dependencies
-```json
-{
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0",
-  "react-router-dom": "^6.10.0",
-  "vite": "^4.3.1"
-}
-```
-* same can be found on package.json
-## Logic Tree 
-(if anyone is interested open-source development)
-* at start
-```
-website start
-if authenticated
-  to Frontend
-else
-  Signin
-```
+## License
+* This project is licensed under the MIT License.
 
-* at signin
-```
-if signin
-  authenticated
-  redirected to Frontend
-  return signin
-else if signup
-  register
-  all the processing
-  redirect to signin
-```
+## Troubleshooting
+* If the script fails to capture frames from the webcam, make sure the webcam is connected and functional.
+* If the hand landmarks are not detected accurately, try adjusting the min_detection_confidence parameter in the script to a lower value.
 
-* authentication procedure 
+## Project Images
 
-```
-for signin
-  path: server.js -> routes/sign.js /signin -> controllers/sign.js /signin -> routes/authentication.js /login -> controllers/authentication.js /login
-for signup
-  path: server.js -> routes/sign.js /signup -> controllers/sign.js /signup -> routes/authentication.js /register -> controllers/authentication.js /register
-```
-NOTE : data is loaded using model 
-```
-models/user.js
-```
+- **Running Script**
+  ![Running Game](https://github.com/dark-king-001/Hand_gesture/blob/main/Snapshots/Project%20Running.png)
+
+- **Directory Snapshot**
+  ![Directory Snapshot](https://github.com/dark-king-001/Hand_gesture/blob/main/Snapshots/Directory%20Structure.png)
