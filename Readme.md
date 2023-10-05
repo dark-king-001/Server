@@ -98,8 +98,8 @@ npm run dev
 * This project is licensed under the MIT License.
 
 ## Troubleshooting
-* If the script fails to capture frames from the webcam, make sure the webcam is connected and functional.
-* If the hand landmarks are not detected accurately, try adjusting the min_detection_confidence parameter in the script to a lower value.
+* Check if the Databse connection is working properly in the code
+* Check if the nodejs is of latest version
 
 ## Project Images
 
