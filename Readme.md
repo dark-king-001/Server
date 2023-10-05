@@ -85,15 +85,14 @@ npm run dev
 ## Additional libraries
 
 [![cors -  ^2.8.5](https://img.shields.io/badge/cors%20-%20^2.8.5%20-green?style=flat&logo=cors)]({link})
-[![crypto-js -  ^4.1.1](https://img.shields.io/badge/crypto-js%20-%20^4.1.1%20-green?style=flat&logo=crypto-js)]({link})
+[![crypto-js -  ^4.1.1](https://img.shields.io/badge/crypto%20js%20-%20^4.1.1%20-green?style=flat&logo=crypto-js)]({link})
 [![dotenv -  ^16.0.1](https://img.shields.io/badge/dotenv%20-%20^16.0.1%20-green?style=flat&logo=dotenv)]({link})
 [![jsonwebtoken -  ^8.5.1](https://img.shields.io/badge/jsonwebtoken%20-%20^8.5.1%20-green?style=flat&logo=jsonwebtoken)]({link})
-[![multer -  ^1.4.5-lts.1](https://img.shields.io/badge/multer%20-%20^1.4.5-lts.1%20-green?style=flat&logo=multer)]({link})
+[![multer -  ^1.4.5-lts.1](https://img.shields.io/badge/multer%20^1.4.5-lts.1%20-green?style=flat&logo=multer)]({link})
 [![nodemon -  ^2.0.19](https://img.shields.io/badge/nodemon%20-%20^2.0.19%20-green?style=flat&logo=nodemon)]({link})
 [![sharp -  ^0.30.7](https://img.shields.io/badge/sharp%20-%20^0.30.7%20-green?style=flat&logo=sharp)]({link})
 [![uuidv4 -  ^6.2.13](https://img.shields.io/badge/uuidv4%20-%20^6.2.13%20-green?style=flat&logo=uuidv4)]({link})
 [![axios -  ^0.27.2](https://img.shields.io/badge/axios%20-%20^0.27.2%20-green?style=flat&logo=axios)]({link})
-[![crypto-js -  ^4.1.1](https://img.shields.io/badge/crypto-js%20-%20^4.1.1%20-green?style=flat&logo=crypto-js)]({link})
 [![dotenv -  ^16.0.1](https://img.shields.io/badge/dotenv%20-%20^16.0.1%20-green?style=flat&logo=dotenv)]({link})
 
 ## License
