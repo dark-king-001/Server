@@ -41,7 +41,7 @@ This is a project inspired by ex twitter. A micro Blogging website that enhances
 - **User Interface or Front-End** ReactJS
 - **Back-End** ExpressJS MongooseJS
 - **Server Side** Linux Machine NodeJS
-- **Database** MongoDB
+- **Database** MongoDB : Make sure there is a local database running
 - **Working Internet Connection**
 - **Browser with working V8 Javascript Engine.**
 
@@ -66,34 +66,35 @@ Future expectations for the Vichaarshala Twitter clone application include user 
 
 1. Clone the repo: 
 ```sh
-git clone https://github.com/dark-king-001/Hand_gesture.git
+git clone https://github.com/dark-king-001/VichaarShala.git
+cd VichaarShala
 ```
-2. Install the required packages:
+2. Install and run backend:
 ```sh
-pip install opencv-python numpy mediapipe tensorflow keras
+cd api
+npm i
+npm run start
 ```
-3. Enter the Folder: 
+3. Install and run frontend: 
 ```sh
-cd Hand_gesture
-```
-4. run the game: 
-```sh
-python main.py
+cd client
+npm i
+npm run dev
 ```
 
 ## Additional libraries
 
-"cors": "^2.8.5",
-"crypto-js": "^4.1.1",
-"dotenv": "^16.0.1",
-"jsonwebtoken": "^8.5.1",
-"multer": "^1.4.5-lts.1",
-"nodemon": "^2.0.19",
-"sharp": "^0.30.7",
-"uuidv4": "^6.2.13",
-"axios": "^0.27.2",
-"crypto-js": "^4.1.1",
-"dotenv": "^16.0.1"
+[![cors -  ^2.8.5](https://img.shields.io/badge/cors%20-%20^2.8.5%20-green?style=flat&logo=cors)]({link})
+[![crypto-js -  ^4.1.1](https://img.shields.io/badge/crypto-js%20-%20^4.1.1%20-green?style=flat&logo=crypto-js)]({link})
+[![dotenv -  ^16.0.1](https://img.shields.io/badge/dotenv%20-%20^16.0.1%20-green?style=flat&logo=dotenv)]({link})
+[![jsonwebtoken -  ^8.5.1](https://img.shields.io/badge/jsonwebtoken%20-%20^8.5.1%20-green?style=flat&logo=jsonwebtoken)]({link})
+[![multer -  ^1.4.5-lts.1](https://img.shields.io/badge/multer%20-%20^1.4.5-lts.1%20-green?style=flat&logo=multer)]({link})
+[![nodemon -  ^2.0.19](https://img.shields.io/badge/nodemon%20-%20^2.0.19%20-green?style=flat&logo=nodemon)]({link})
+[![sharp -  ^0.30.7](https://img.shields.io/badge/sharp%20-%20^0.30.7%20-green?style=flat&logo=sharp)]({link})
+[![uuidv4 -  ^6.2.13](https://img.shields.io/badge/uuidv4%20-%20^6.2.13%20-green?style=flat&logo=uuidv4)]({link})
+[![axios -  ^0.27.2](https://img.shields.io/badge/axios%20-%20^0.27.2%20-green?style=flat&logo=axios)]({link})
+[![crypto-js -  ^4.1.1](https://img.shields.io/badge/crypto-js%20-%20^4.1.1%20-green?style=flat&logo=crypto-js)]({link})
+[![dotenv -  ^16.0.1](https://img.shields.io/badge/dotenv%20-%20^16.0.1%20-green?style=flat&logo=dotenv)]({link})
 
 ## License
 * This project is licensed under the MIT License.
