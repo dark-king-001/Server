@@ -1,6 +1,6 @@
 # VichaarShala
 <p align="center">
-  <img src="https://github.com/dark-king-001/VichaarShala/blob/main/Snapshots/logo.png" alt="Snake Game" />
+  <img src="https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/Logo.jpeg" alt="VichaarShala Logo" />
 </p>
 
 <p align="center">
@@ -55,13 +55,9 @@ Future expectations for the Vichaarshala Twitter clone application include user 
 ## Build With
 
 [![MongoDB - this is a NoSQL Database](https://img.shields.io/badge/MongoDB%20-this%20is%20a%20NoSQL%20Database%20-green?style=flat&logo=MongoDB)](https://www.mongodb.com/)
-
 [![NodeJS - a javascript runtime](https://img.shields.io/badge/NodeJS%20-a%20javascript%20runtime%20-green?style=flat&logo=NodeJS)](https://nodejs.org/en)
-
 [![ExpressJS - A NodeJS Web Framework](https://img.shields.io/badge/ExpressJS%20-A%20NodeJS%20Web%20Framework%20-green?style=flat&logo=ExpressJS)](https://expressjs.com/)
-
 [![ReactJS - A NodeJS Frontend Library](https://img.shields.io/badge/ReactJS%20-A%20NodeJS%20Frontend%20Library%20-green?style=flat&logo=ReactJS)](https://react.dev/)
-
 [![MongooseJS - A NodeJS ODM For MongoDB](https://img.shields.io/badge/MongooseJS%20-A%20NodeJS%20ODM%20For%20MongoDB%20-green?style=flat&logo=Mongoose)](https://mongoosejs.com/)
 
 ## Getting Started
