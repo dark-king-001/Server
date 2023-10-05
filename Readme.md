@@ -93,7 +93,6 @@ npm run dev
 [![sharp -  ^0.30.7](https://img.shields.io/badge/sharp%20-%20^0.30.7%20-green?style=flat&logo=sharp)]({link})
 [![uuidv4 -  ^6.2.13](https://img.shields.io/badge/uuidv4%20-%20^6.2.13%20-green?style=flat&logo=uuidv4)]({link})
 [![axios -  ^0.27.2](https://img.shields.io/badge/axios%20-%20^0.27.2%20-green?style=flat&logo=axios)]({link})
-[![dotenv -  ^16.0.1](https://img.shields.io/badge/dotenv%20-%20^16.0.1%20-green?style=flat&logo=dotenv)]({link})
 
 ## License
 * This project is licensed under the MIT License.
