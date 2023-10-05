@@ -1,10 +1,10 @@
-# Hand Gesture Recognition
+# VichaarShala
 <p align="center">
-  <img src="https://github.com/dark-king-001/Snake_Game/blob/main/Snapshots/Snake%20Game.png" alt="Snake Game" />
+  <img src="https://github.com/dark-king-001/VichaarShala/blob/main/Snapshots/logo.png" alt="Snake Game" />
 </p>
 
 <p align="center">
-  <h4 align="center">Be Smart with a hand gesture system control</h4>
+  <h4 align="center">A MERN Stack Application Inspired By Ex-Twitter</h4>
 </p>
 
 
@@ -12,27 +12,57 @@
 
 ### Overview
 
-This script allows you to control the system volume using hand gestures recognized by a computer vision model. It uses the MediaPipe library for hand tracking and a pre-trained model for gesture recognition.
+This is a project inspired by ex twitter. A micro Blogging website that enhances the User Experience with its vast functionalities which enable it to be evolved into a All Rounder App That can integrate functionalities of other large Apps.
 
 ### Features
 
+- **Authentication**: Sign Up and Login Implemented
+- **Posting New Vichaar( aka Thoughts)**: Basic Post uploading has been implement
+- **Interactive UI**: UI has been Implement into the Web Application
+- **Profile**: Basic Profile has been added
+- **Database**: data is being directly added to database.
 
-- **Increase Volume**: Thumbs Up: Increases the system volume.
-- **Decrease Volume**: Thumbs Down: Decreases the system volume.
+### Features to be added
+- **Image uploading**
+- **Video uploading**
+- **Re-sending**
+- **post link generation**
+- **A live Server for chatting using SOCKET.IO**
+- **User Overview**
+- **User Statistic**
+- **Profile Dataset**
+- **Algorithm for random feed**
+- **A complete community feature**
+- **Voice Messaging**
+- **Voice Calling**
+- **Video Calling**
 
 ### Dependencies
-
-- **Hardware Access**: The script will start capturing the video from the webcam and display the output frame.
-- **System Requirements**: Make sure your system has audio capabilities and the necessary audio drivers are installed for volume control to work properly.
+- **User Interface or Front-End** ReactJS
+- **Back-End** ExpressJS MongooseJS
+- **Server Side** Linux Machine NodeJS
+- **Database** MongoDB
+- **Working Internet Connection**
+- **Browser with working V8 Javascript Engine.**
 
 ### Purpose
 
-To learn Machine Learning and AI in python in a more fun way
+Due to the end of twitter we were motivated to create a similar Application to share thoughts across the globe. to share ideas on a platform 
+Inspired by ex twitter
+
+Future expectations for the Vichaarshala Twitter clone application include user growth, feature enhancements, improved user engagement, and potential monetization strategies.
 
 ## Build With
-[![Python 3.10 - Programming Language](https://img.shields.io/badge/Python%203.10%20-Programming%20Language%20-green?style=flat&logo=Python)](https://www.python.org/)
-[![Tensorflow - Python Module For Machine Learning](https://img.shields.io/badge/Tensorflow%20-Python%20Module%20For%20Machine%20Learning%20-green?style=flat&logo=TF)](https://www.tensorflow.org/)
-[![Keras - Backend API for Machine Learning](https://img.shields.io/badge/Keras%20-Backend%20API%20for%20Machine%20Learning%20-green?style=flat&logo=Keras)](https://keras.io/)
+
+[![MongoDB - this is a NoSQL Database](https://img.shields.io/badge/MongoDB%20-this%20is%20a%20NoSQL%20Database%20-green?style=flat&logo=MongoDB)](https://www.mongodb.com/)
+
+[![NodeJS - a javascript runtime](https://img.shields.io/badge/NodeJS%20-a%20javascript%20runtime%20-green?style=flat&logo=NodeJS)](https://nodejs.org/en)
+
+[![ExpressJS - A NodeJS Web Framework](https://img.shields.io/badge/ExpressJS%20-A%20NodeJS%20Web%20Framework%20-green?style=flat&logo=ExpressJS)](https://expressjs.com/)
+
+[![ReactJS - A NodeJS Frontend Library](https://img.shields.io/badge/ReactJS%20-A%20NodeJS%20Frontend%20Library%20-green?style=flat&logo=ReactJS)](https://react.dev/)
+
+[![MongooseJS - A NodeJS ODM For MongoDB](https://img.shields.io/badge/MongooseJS%20-A%20NodeJS%20ODM%20For%20MongoDB%20-green?style=flat&logo=Mongoose)](https://mongoosejs.com/)
 
 ## Getting Started
 
@@ -57,9 +87,17 @@ python main.py
 
 ## Additional libraries
 
-[![OpenCV - Hardware and AI module](https://img.shields.io/badge/OpenCV%20-Hardware%20and%20AI%20module%20-green?style=flat&logo=OpenCV)](https://opencv.org/)
-[![NumPy - A Scientific Calculation module](https://img.shields.io/badge/NumPy%20-A%20Scientific%20Calculation%20module%20-green?style=flat&logo=NumPy)](https://numpy.org/)
-[![Mediapipe - Cross-platform API deployment solution](https://img.shields.io/badge/Mediapipe-Cross%20platform%20API%20deployment%20solution%20-green?style=flat&logo=Mediapipe)](https://pypi.org/project/mediapipe/)
+"cors": "^2.8.5",
+"crypto-js": "^4.1.1",
+"dotenv": "^16.0.1",
+"jsonwebtoken": "^8.5.1",
+"multer": "^1.4.5-lts.1",
+"nodemon": "^2.0.19",
+"sharp": "^0.30.7",
+"uuidv4": "^6.2.13",
+"axios": "^0.27.2",
+"crypto-js": "^4.1.1",
+"dotenv": "^16.0.1"
 
 ## License
 * This project is licensed under the MIT License.
@@ -70,8 +108,19 @@ python main.py
 
 ## Project Images
 
-- **Running Script**
-  ![Running Game](https://github.com/dark-king-001/Hand_gesture/blob/main/Snapshots/Project%20Running.png)
-
-- **Directory Snapshot**
-  ![Directory Snapshot](https://github.com/dark-king-001/Hand_gesture/blob/main/Snapshots/Directory%20Structure.png)
+- **Sign up**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss1.png)
+- **Login**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss2.png)
+- **Home**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss3.png)
+- **Profile**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss4.png)
+- **Edit Profile**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss5.png)
+- **New Vichaar Home**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss6.png)
+- **Home Mobile View**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss7.png)
+- **Profile Mobile VIew**
+  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss8.png)
