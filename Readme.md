@@ -107,8 +107,6 @@ npm run dev
   ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss1.png)
 - **Login**
   ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss2.png)
-- **Home**
-  ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss3.png)
 - **Profile**
   ![Running Game](https://github.com/dark-king-001/VichaarShala/blob/main/SnapShots/ss4.png)
 - **Edit Profile**
